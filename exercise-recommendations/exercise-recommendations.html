@@ -23,192 +23,246 @@
         </p>
       </div>
     </div>
-    <div class="container">
-      <div class="col-md-3">
-        <form id="form-group"></form>
-        <div>
-          <label for="group">Muscle Group</label>
-          <div
-            class="btn-group-vertical"
-            role="group"
-            aria-label="Basic radio toggle button group"
-          >
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio1"
-              autocomplete="off"
-              checked
-            />
-            <label class="btn btn-outline-primary" for="btnradio1">Abs</label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio2"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio2">Arms</label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio3"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio3">Back</label>
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio4"
-              autocomplete="off"
-              checked
-            />
-            <label class="btn btn-outline-primary" for="btnradio4"
-              >Calves</label
+    <div class="container-fluid">
+      <form id="exercise-info">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="row">
+              <label for="group col-md-3"><h3>Select a muscle group</h3></label>
+              <div
+                class="btn-group"
+                role="group"
+                required
+                aria-label="Select a muscle group"
+              >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="10"
+                  id="abs"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="abs">Abs</label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="8"
+                  id="arms"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="arms">Arms</label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="12"
+                  id="back"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="back">Back</label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="14"
+                  id="calves"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="calves"
+                  >Calves</label
+                >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="11"
+                  id="chest"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="chest">Chest</label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="9"
+                  id="legs"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="legs">Legs</label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="musclegroupradio"
+                  value="13"
+                  id="shoulders"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="shoulders"
+                  >Shoulders</label
+                >
+              </div>
+            </div>
+            <div class="row">
+              <label for="equipment"
+                ><h3>Select your available equipment</h3></label
+              >
+              <div
+                class="btn-group"
+                required
+                role="group"
+                aria-label="Select your available equipment"
+              >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="1"
+                  id="barbell"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="barbell"
+                  >Barbell</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="8"
+                  id="bench"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="bench">Bench</label>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="3"
+                  id="dumbbell"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="dumbbell"
+                  >Dumbbell</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="4"
+                  id="gym_mat"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="gym_mat"
+                  >Gym Mat</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="9"
+                  id="incline_bench"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="incline_bench"
+                  >Incline Bench</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="10"
+                  id="kettlebell"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="kettlebell"
+                  >Kettlebell</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="7"
+                  id="none"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="none">None</label>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="6"
+                  id="pullup_bar"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="pullup_bar"
+                  >Pull-Up Bar</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="5"
+                  id="exercise_ball"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="exercise_ball"
+                  >Exercise Ball</label
+                >
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="equipment"
+                  value="2"
+                  id="sz_bar"
+                  autocomplete="off"
+                />
+                <label class="btn btn-outline-primary" for="sz_bar"
+                  >SZ-Bar</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-grid gap-2">
+            <div>
+              <select
+                class="form-select form-select-sm"
+                name="language"
+                aria-label="Select language"
+              >
+                <option value="0">čeština</option>
+                <option value="1">Deutsch</option>
+                <option selected value="2">English</option>
+                <option value="3">Español</option>
+                <option value="4">Français</option>
+                <option value="5">Italian</option>
+                <option value="6">Nederlands</option>
+                <option value="7">Norsk</option>
+                <option value="8">Polish</option>
+                <option value="9">Português</option>
+                <option value="10">Svenska</option>
+                <option value="11">Türkçe</option>
+                <option value="12">ελληνικά</option>
+                <option value="13">български език</option>
+                <option value="14">Русский</option>
+                <option value="15">українська мова</option>
+              </select>
+            </div>
+            <button
+              id="get_exercises"
+              type="submit"
+              class="btn btn-primary btn-lg"
             >
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio5"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio5">Chest</label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio6"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio6">Legs</label>
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio7"
-              autocomplete="off"
-              checked
-            />
-            <label class="btn btn-outline-primary" for="btnradio7"
-              >Shoulders</label
-            >
+              Get Exercises
+            </button>
           </div>
         </div>
-        <div>
-          <label for="equipment">Available Equipment</label>
-          <div
-            class="btn-group-vertical"
-            role="group"
-            aria-label="Basic checkbox toggle button group"
-          >
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck1"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck1"
-              >Barbell</label
-            >
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck2"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck2">Bench</label>
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck3"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck3"
-              >Dumbbell</label
-            >
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck4"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck4"
-              >Gym Mat</label
-            >
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck5"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck5"
-              >Incline Bench</label
-            >
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck6"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck6"
-              >Kettlebell</label
-            >
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck7"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck7">None</label>
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck8"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck8"
-              >Pull-Up Bar</label
-            >
-
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck9"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck9"
-              >Exercise Ball</label
-            >
-            <input
-              type="checkbox"
-              class="btn-check"
-              id="btncheck10"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btncheck10"
-              >SZ-Bar</label
-            >
-          </div>
-        </div>
-      </div>
+      </form>
       <div>
         <!-- results-->
       </div>
     </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="exrec.js"></script>
   </body>
 </html>
