@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <h3 >Your Workouts</h3>
+            <!-- Loop through workouts -->
+            <% if (workouts.length==0) { %>
+                <p id="no_workout">
+                    <textarea name="Your Workouts" id="Your_Workouts" cols="23" rows="2" placeholder="No Workouts found"></textarea>
+                </p>
+                <%} else { %>
+                    <p>
+                        <% for(var i = 0; i < workouts.length; i++) {%>
+                            <ul class="users_workouts"></ul>
+                                <li class="workout">
+                                    <!-- Output Date from the iterated work object -->
+                                    <span><%= workouts[i].Date %> &nbsp;</span>&nbsp;:&nbsp;
+                                    <!-- Output bodyPart from the iterated work object -->
+                                    <span><%= workouts[i].bodyPart %></span>-
+                                    <!-- Output workout type from the iterated workout object -->
+                                    <span><%= workouts[i].workout %></span>,
+                                    <!-- Output workout duration from the iterated workout object -->
+                                    <span><%= workouts[i].Reps_Interval %></span>
+                                </li>
+                            <% } %>
+                            </ul>
+                    </p>
+                <% } %>
+                
+            
+        <div id="input_area">
+            <p>Please use the form below to add your workout:</p> 
+
+            <form id="user_input" action="/workouts" method="POST" >
+                <div class="form-group">
+                  <label for="bodypartSelect">Select the <strong>Body Part</strong> you worked on</label>
+                  <select class="form-control" id="bodypartSelect" name="bodyPart">
+                    <option>Abs</option>
+                    <option>Arms</option>
+                    <option>Back</option>
+                    <option>Calves</option>
+                    <option>Chest</option>
+                    <option>Legs</option>
+                    <option>Shoulders</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exerciseType"><strong>Exercise</strong></label>
+                  <input type="text" class="form-control" id="exerciseType" placeholder="Enter the type of exercise performed" name="workout">
+                </div>
+                
+                <div class="form-group">
+                  <label for="Reps_Interval"><strong>Reps/Duration</strong></label>
+                  <textarea class="form-control" id="Reps_Interval" rows="3" placeholder="Enter the repetitions or duration of the exercise" name="Reps_Interval"></textarea>
+                </div>
+                <button type="submit">Add Workout</button>
+            </form>          
+        </div>
+    <body>
+</html>
