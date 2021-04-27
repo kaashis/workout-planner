@@ -26,7 +26,7 @@ async function handleFormSubmit(evt) {
 }
 
 async function display(exercise) {
-  console.log(exercise);
+  cardCont.innerHTML = "";
   for (var i = 0; i < 9; i++) {
     console.log(exercise[i].name)
     newCard(exercise[i]);
