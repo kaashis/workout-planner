@@ -14,9 +14,9 @@ async function handleFormSubmit(evt) {
   for (var i = 0; i < equipment.length; i++) {
     equipArr.push(equipment[i].value);
   }
-  const lang = exerciseFormInfo.language.value;
+  //const lang = exerciseFormInfo.language.value;
   const equipParam = equipArr.toString();
-  const params = `?language=${lang}&musclescategory=${muscleGroup}&equipment=${equipParam}`;
+  const params = `?language=2&musclescategory=${muscleGroup}&equipment=${equipParam}`;
 
   console.log(WGER_API_EXERCISE + params);
 
@@ -27,7 +27,7 @@ async function handleFormSubmit(evt) {
 
 async function display(exercise) {
   cardCont.innerHTML = "";
-  for (var i = 0; i < 9; i++) {
+  for (var i = 0; i < exercise.length; i++) {
     console.log(exercise[i].name)
     newCard(exercise[i]);
   }
