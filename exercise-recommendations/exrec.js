@@ -35,7 +35,7 @@ function newCard(exercise) {
   const video = YOUTUBE + name;
 
   const newCardCont = document.createElement("div");
-  newCardCont.setAttribute("class", "col-md-3 exercise-card m-2");
+  newCardCont.setAttribute("class", "card col-md-3 exercise-card m-1");
   cardCont.appendChild(newCardCont);
 
   const newCard = document.createElement("div");

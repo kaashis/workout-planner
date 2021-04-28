@@ -20,6 +20,14 @@
   text-decoration: none;
 }
 
+.btn-color {
+  color:rgba(0, 0, 0, .05)
+}
+
+.exercise-card {
+    border: 1px solid lightgray;
+}
+
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
