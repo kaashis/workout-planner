@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/calculator";
+const API = "https://workout-planner-team2.herokuapp.com/";
 
 document.getElementById("userForm").addEventListener("submit", handleSubmit);
 
@@ -20,7 +20,7 @@ function handleSubmit(e) {
   if (calculate === "bmi") {
     var options = {
       method: "GET",
-      url: "http://localhost:3000/bmi",
+      url: "https://workout-planner-team2.herokuapp.com/bmi",
       params: {
         age: age,
         // gender: gender,
@@ -65,7 +65,7 @@ function handleSubmit(e) {
   } else {
     var options = {
       method: "GET",
-      url: "http://localhost:3000/calculator",
+      url: "https://workout-planner-team2.herokuapp.com/calculator",
       params: {
         age: age,
         gender: gender,
