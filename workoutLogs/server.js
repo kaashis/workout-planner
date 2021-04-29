@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
+
 const { getCurrDate } = require("../Services");
 ObjectId = require("mongodb").ObjectID;
 const moment = require("moment");
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //This tells Express we’re using EJS as the template engine
 app.set("view engine", "ejs");
+
 
 //make the public folder accessible to the public by using a built-in middleware called express.static
 app.use(express.static("public"));
